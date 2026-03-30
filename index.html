@@ -96,6 +96,7 @@
     /* ── Figure block ── */
     .figure-block {
       margin-bottom: 2.5rem;
+      width: 100%;
     }
 
     .figure-label {
@@ -154,7 +155,8 @@
       font-size: 0.92rem;
       color: var(--ink-light);
       line-height: 1.65;
-      max-width: 80%;
+      max-width: 100%;
+      width: 100%; /* add this */
     }
 
     figcaption strong {
@@ -196,6 +198,10 @@
       text-transform: uppercase;
     }
 
+    .katex {
+      font-size: 1em;
+    }
+
     /* ── Fade-in ── */
     @keyframes fadein {
       from {
@@ -233,13 +239,7 @@
   <figure class="figure-block">
     <p class="figure-label">Figure 1</p>
     <div class="figure-frame">
-      <!-- Replace the placeholder below with your actual image:
-           <img src="your-figure.png" alt="Brief description of the figure" />
-      -->
-      <!--        <div class="placeholder">-->
-      <!--          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>-->
-      <!--          <span>Replace with your figure.png</span>-->
-      <!--        </div>-->
+
       <img src="img/figure_rebuttal_classification_grid.png" alt="Binary classification problem"/>
     </div>
     <figcaption>
