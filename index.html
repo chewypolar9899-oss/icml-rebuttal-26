@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Supplementary Material</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap"
+    rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]
+  });">
+  </script>
+  2. Use
   <style>
     :root {
       --ink: #1a1a1a;
@@ -186,51 +199,66 @@
 
     /* ── Fade-in ── */
     @keyframes fadein {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     header, main, footer {
       animation: fadein 0.5s ease both;
     }
-    main   { animation-delay: 0.08s; }
-    footer { animation-delay: 0.14s; }
+
+    main {
+      animation-delay: 0.08s;
+    }
+
+    footer {
+      animation-delay: 0.14s;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <p class="eyebrow">ICML 2026 &mdash; Rebuttal</p>
-    <h1>Position: Epistemic uncertainty estimation methods are fundamentally incomplete</h1>
-    <p class="subtitle">Additional figures referenced in the author rebuttal</p>
-  </header>
+<header>
+  <p class="eyebrow">ICML 2026 &mdash; Rebuttal</p>
+  <h1>Position: Epistemic uncertainty estimation methods are fundamentally incomplete</h1>
+  <p class="subtitle">Additional figures referenced in the author rebuttal</p>
+</header>
 
-  <main>
-    <figure class="figure-block">
-      <p class="figure-label">Figure 1</p>
-      <div class="figure-frame">
-        <!-- Replace the placeholder below with your actual image:
-             <img src="your-figure.png" alt="Brief description of the figure" />
-        -->
-<!--        <div class="placeholder">-->
-<!--          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>-->
-<!--          <span>Replace with your figure.png</span>-->
-<!--        </div>-->
-        <img src="img/figure_rebuttal_classification_grid.png" alt="Binary classification problem" />
-      </div>
-      <figcaption>
-        <strong>Figure 1.</strong>
-        Uncertainty estimation for a binary classification problem. There are two panels for each model type. The panel on top shows the training data, the true conditional expectation and the model predictions. The panel on the bottom shows the aleatoric and epistemic uncertainty estimates, and the true aleatoric uncertainty (entropy of the true conditional expected value at each point). We see that when the model bias is high, aleatoric uncertainty is inflated and epistemic uncertainty is underestimated.
-      </figcaption>
-    </figure>
+<main>
+  <figure class="figure-block">
+    <p class="figure-label">Figure 1</p>
+    <div class="figure-frame">
+      <!-- Replace the placeholder below with your actual image:
+           <img src="your-figure.png" alt="Brief description of the figure" />
+      -->
+      <!--        <div class="placeholder">-->
+      <!--          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>-->
+      <!--          <span>Replace with your figure.png</span>-->
+      <!--        </div>-->
+      <img src="img/figure_rebuttal_classification_grid.png" alt="Binary classification problem"/>
+    </div>
+    <figcaption>
+      <strong>Figure 1.</strong>
+      Uncertainty estimation for a binary classification problem, where $p(y|x)=0.5\times(\sin(\frac{1}{5x^3})+1)$. There are two panels for each model type. The panel on
+      top shows the training data as the blue marks, the true probability of $y$ given $x$ and the models' probabilities predictions. The panel on the bottom
+      shows the aleatoric and epistemic uncertainty estimates, and the true aleatoric uncertainty (entropy of the true conditional probability). We see that when the model bias is high, aleatoric uncertainty is
+      inflated and epistemic uncertainty is underestimated.
+    </figcaption>
+  </figure>
 
 
-  </main>
+</main>
 
-  <footer>
-    <span class="footer-note">Supplementary material &mdash; author rebuttal</span>
-    <span class="footer-note">Anonymous submission</span>
-  </footer>
+<footer>
+  <span class="footer-note">Supplementary material &mdash; author rebuttal</span>
+  <span class="footer-note">Anonymous submission</span>
+</footer>
 
 </body>
 </html>
